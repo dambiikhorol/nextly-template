@@ -26,7 +26,7 @@ const Home = () => {
 
       <Navbar />
       <Hero />
-      
+
       <SectionTitle
         pretitle="Our Services"
         title="We Offer A Wide Range Of Data Services And Data Analytics Solutions">
@@ -49,7 +49,7 @@ const Home = () => {
         don&apos;t forget to add one. Just like this.
       </SectionTitle>
       <Video />
-      
+
       <SectionTitle pretitle="FAQ" title="Frequently Asked Questions">
         Answer your customers possible questions here, it will increase the
         conversion rate as well as support or chat requests.

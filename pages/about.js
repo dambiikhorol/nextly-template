@@ -5,23 +5,23 @@ import Cta from "../components/cta";
 import PopupWidget from "../components/popupWidget";
 
 const About = () => {
-    return (
-        <>
-          <Head>
-            <title>CoreTech</title>
-            <meta
-              name="description"
-              content="CoreTech"
-            />
-            <link rel="icon" href="/favicon.ico" />
-          </Head>
-    
-          <Navbar />
-          <Cta />
-          <Footer />
-          <PopupWidget />
-        </>
-      );
-  }
-  
-  export default About;
+  return (
+    <>
+      <Head>
+        <title>CoreTech</title>
+        <meta
+          name="description"
+          content="CoreTech"
+        />
+        <link rel="icon" href="/favicon.ico" />
+      </Head>
+
+      <Navbar />
+      <Cta />
+      <Footer />
+      <PopupWidget />
+    </>
+  );
+}
+
+export default About;
