@@ -3,10 +3,8 @@ import Navbar from "../components/navbar";
 import Footer from "../components/footer";
 import Cta from "../components/cta";
 import PopupWidget from "../components/popupWidget";
-import ContactForm from "../components/contactform";
-import Banner from "../components/banner";
 
-const Contact = () => {
+const Projects = () => {
     return (
         <>
           <Head>
@@ -17,9 +15,8 @@ const Contact = () => {
             />
             <link rel="icon" href="/favicon.ico" />
           </Head>
+    
           <Navbar />
-          <Banner />
-          <ContactForm />
           <Cta />
           <Footer />
           <PopupWidget />
@@ -27,4 +24,4 @@ const Contact = () => {
       );
   }
   
-  export default Contact;
+  export default Projects;

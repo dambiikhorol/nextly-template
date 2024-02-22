@@ -16,7 +16,7 @@ const Home = () => {
   return (
     <>
       <Head>
-        <title>CoreTech Test</title>
+        <title>CoreTech</title>
         <meta
           name="description"
           content="CoreTech"
