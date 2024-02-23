@@ -3,13 +3,51 @@ import Navbar from "../components/navbar";
 import Footer from "../components/footer";
 import Cta from "../components/cta";
 import PopupWidget from "../components/popupWidget";
+import ContactForm from "../components/contactform";
 import Banner from "../components/banner";
-import Container from "../components/container";
 
-const Company = () => {
+
+export default function VerticalTimeline() {
+  const data = [
+    {
+      date: "April 2022",
+      title: "Project Concept",
+      description:
+        "The Crypto Group is established. Start of our project concept.",
+    },
+    {
+      date: "May 2022",
+      title: "Platform Launch",
+      description:
+        "Our trading platform is launched with full solutions in USA and Europe.",
+    },
+    {
+      date: "June 2022",
+      title: "Published Whitepaper",
+      description:
+        "Our Whitepaper is released to our investors, clients and beta users",
+    },
+    {
+      date: "August 2022",
+      title: "First Pre-Sale",
+      description:
+        "Start of the ICO token first pre-sale. Test advertising campaign.",
+    },
+    {
+      date: "September 2022",
+      title: "Mobile App Release",
+      description:
+        "Our Mobile App is released and its avilable in iOS and Android devices. ",
+    },
+    {
+      date: "Now",
+      title: "ICO Launch",
+    },
+  ];
+
   return (
     <>
-      <Head>
+    <Head>
         <title>CoreTech</title>
         <meta
           name="description"
@@ -19,38 +57,42 @@ const Company = () => {
       </Head>
       <Navbar />
       <Banner />
-      <Container>
-        <div className="grid max-w-screen-xl grid-cols-1 gap-10 pt-10 mx-auto mt-5 lg:grid-cols-4">
-          <div className="lg:col-span-2">
-
-            <div className="flex flex-col justify-between w-full h-full">
-
-              <img src="../../../../img/service2.png" />
-
-            </div>
-          </div>
-
-          <div className='lg:col-span-2'>
-            <div className='flex max-w-xl flex-col items-start justify-between p-8 mb-8'>
-              <h3 className="max-w-2xl mt-3 text-3xl p-8">
-                Delivering the insights you to help business growth
-              </h3>
-              <p className='p-8'>
-                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Beatae adipisci laudantium corporis, officiis ut dolore fuga doloremque, aperiam excepturi quisquam optio distinctio. Iure sequi illum rem. Libero perferendis quae dignissimos?
+      <div className="px-5">
+        <div className="relative max-w-xl mx-auto my-16 lg:max-w-3xl before:absolute before:top-0 before:w-1 before:h-full before:left-2 before:bg-indigo-500 lg:before:left-1/2">
+          {data.map((item, index) => (
+            <div
+              key={index}
+              className="relative pl-8 mb-12 lg:flex even:flex-row-reverse">
+              <div className="absolute top-0 left-0 w-5 h-5 bg-white border-4 border-indigo-500 rounded-full dark:bg-slate-900 lg:left-1/2 lg:-translate-x-2"></div>
+              <p
+                className={`text-sm tracking-wide text-indigo-400 uppercase lg:w-1/2 lg:mt-px  lg:pr-8 ${
+                  index % 2 === 0 ? "lg:text-right" : "lg:text-left"
+                }`}>
+                {item.date}
               </p>
-              <p className='p-8'>
-                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Beatae adipisci laudantium corporis, officiis ut dolore fuga doloremque, aperiam excepturi quisquam optio distinctio. Iure sequi illum rem. Libero perferendis quae dignissimos?
-              </p>
-
+              <div
+                className={`lg:w-1/2 lg:-mt-1  ${
+                  index % 2 === 0
+                    ? "lg:text-left lg:ml-5 "
+                    : "lg:text-right lg:pr-10"
+                }`}>
+                <h4 className="mt-4 text-xl text-indigo-500 lg:mt-0">
+                  {item.title}
+                </h4>
+                {item.description && (
+                  <p className="mt-2 leading-7 text-primary-light">
+                    {item.description}
+                  </p>
+                )}
+              </div>
             </div>
-          </div>
+          ))}
         </div>
-      </Container>
+      </div>
       <Cta />
       <Footer />
       <PopupWidget />
     </>
   );
-}
 
-export default Company;
+ }
