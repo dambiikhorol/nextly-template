@@ -39,15 +39,15 @@ export default function ServiceDetial() {
                     <div className='lg:col-span-2'>
                         <div className='flex max-w-xl flex-col items-start justify-between p-8 mb-8'>
                             <h3 className="max-w-2xl mt-3 text-3xl p-8">
-                            Delivering the insights you to help business growth
+                                Delivering the insights you to help business growth
                             </h3>
                             <p className='p-8'>
-                            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Beatae adipisci laudantium corporis, officiis ut dolore fuga doloremque, aperiam excepturi quisquam optio distinctio. Iure sequi illum rem. Libero perferendis quae dignissimos?
+                                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Beatae adipisci laudantium corporis, officiis ut dolore fuga doloremque, aperiam excepturi quisquam optio distinctio. Iure sequi illum rem. Libero perferendis quae dignissimos?
                             </p>
                             <p className='p-8'>
-                            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Beatae adipisci laudantium corporis, officiis ut dolore fuga doloremque, aperiam excepturi quisquam optio distinctio. Iure sequi illum rem. Libero perferendis quae dignissimos?
+                                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Beatae adipisci laudantium corporis, officiis ut dolore fuga doloremque, aperiam excepturi quisquam optio distinctio. Iure sequi illum rem. Libero perferendis quae dignissimos?
                             </p>
-                           
+
                         </div>
                     </div>
                 </div>
