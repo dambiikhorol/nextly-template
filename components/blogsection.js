@@ -10,7 +10,7 @@ const BlogSection = () => {
     return (
         <Container className="!p-0 bg-black max-w-screen-2xl rounded-lg ">
 
-            <div className="grid grid-flow-row-dense grid-cols-3 grid-rows-3 p-20">
+            <div className="grid grid-flow-row-dense grid-cols-3 grid-rows-3 p-20" id="blog">
                 <div className="col-span-3 md:row-span-3 self-center md:col-span-1">
 
                     <h3 className="text-7xl text-white ">
