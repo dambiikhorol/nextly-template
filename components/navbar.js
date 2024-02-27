@@ -4,28 +4,29 @@ import Image from "next/image";
 import cx from "clsx";
 import { Menu, Transition, Disclosure } from "@headlessui/react";
 import { ChevronDownIcon } from "@heroicons/react/24/solid";
-import LogoImg from "../public/img/logo.svg";
+import LogoImg from "../public/img/logo-2.svg";
 
 const navigation = [
-  { title: "Projects", path: "/projects" },
-  { title: "Services", path: "/services" },
-  { title: "Company", path: "/company" },
-  { title: "Blog", path: "/blog" },
+  { title: "Нүүр", path: "/" },
   {
-    title: "Dropdown",
+    title: "Үйлчилгээ",
     path: "#",
     children: [
-      { title: "Action", path: "#" },
-      { title: "Another action", path: "#" },
-      { title: "Dropdown Submenu", path: "#" },
+      { title: "Dev Ops", path: "#devops" },
+      { title: "System Dev", path: "#systemdev" },
+      { title: "IoT", path: "#iot" },
+      { title: "AI Dev", path: "#aidev" },
     ],
   },
+  { title: "БигДата үйлчилгээ", path: "#bigdata" },
+  { title: "Блог", path: "#blog" },
+  
 ];
 
 export default function NavbarModern() {
   return (
     <>
-      <div className="px-3 max-w-screen-xl py-3 mx-auto ">
+      <div className="px-8 md:px-20 bg-black">
         <nav className="relative flex flex-wrap items-center justify-between py-6 mx-auto lg:justify-between">
           <div className="flex flex-wrap items-center justify-between w-full lg:w-auto">
             <Logo />
@@ -48,10 +49,8 @@ export default function NavbarModern() {
 
 const Logo = () => {
   return (
-    <Link href="/" className="flex items-center space-x-2 text-2xl font-medium text-indigo-500 dark:text-gray-100">
-   
-        <Image src={LogoImg} alt="logo" />
-        <span>CoreTech</span>
+    <Link href="/" className="flex items-center space-x-2 text-2xl font-medium text-yellow-400 dark:text-gray-100">
+       <Image src={LogoImg} alt="logo" />
     </Link>
   );
 };
@@ -60,7 +59,7 @@ const Hamburger = ({ open }) => {
   return (
     <Disclosure.Button
       aria-label="Toggle Menu"
-      className="px-2 py-1 ml-auto text-gray-800 rounded-md lg:hidden hover:text-indigo-500 focus:text-indigo-500 focus:bg-indigo-50 focus:outline-none ">
+      className="px-2 py-1 ml-auto text-gray-700 rounded-md lg:hidden hover:text-yellow-400 focus:text-yellow-400 focus:bg-yellow-50 focus:outline-none ">
       <svg
         className="w-6 h-6 fill-current"
         xmlns="http://www.w3.org/2000/svg"
@@ -108,12 +107,10 @@ const ActionButtons = ({ mobile }) => {
       className={cx(
         mobile ? "flex gap-3 mt-2" : "hidden mx-3 gap-3 lg:flex"
       )}>
-      
-      <Link href="/contact" className="px-5 py-1.5 text-white bg-indigo-600 rounded-md  font-medium">
-    
-          Contact
-       
+      <Link href="#contact" className="px-5 py-3 text-black border border-black rounded-md font-medium hover:bg-yellow-400 bg-white">
+        Холбоо барих
       </Link>
+     
     </div>
   );
 };
@@ -143,11 +140,11 @@ const NavItems = (props) => {
 const MenuItem = ({ item, mobile }) => {
   return (
     <Link href={item?.path ? item.path : "#"} className={cx(
-      "text-gray-800 dark:text-gray-300 rounded-md outline-none hover:text-indigo-500 focus:text-indigo-500  transition-all focus-visible:ring-1 ring-indigo-300 dark:focus-visible:bg-gray-800 focus:outline-none",
-      mobile
-        ? "w-full block px-4 py-2 -ml-4"
-        : "inline-block px-4 py-2"
-    )}>
+        "text-white rounded-md outline-none hover:text-yellow-400 focus:text-yellow-400  transition-all focus-visible:ring-1 ring-yellow-300 focus:outline-none",
+        mobile
+          ? "w-full block px-4 py-2 -ml-4"
+          : "inline-block px-4 py-2"
+      )}>
       
         {item.title}
     
@@ -162,10 +159,10 @@ const DropdownMenu = ({ menu, items, mobile }) => {
         <>
           <Menu.Button
             className={cx(
-              "flex items-center gap-x-1 transition-all rounded-md outline-none focus:outline-none focus-visible:ring-1  focus-visible:text-indigo-500 dark:focus-visible:bg-gray-800",
+              "flex items-center gap-x-1 transition-all rounded-md outline-none focus:outline-none focus-visible:ring-1  focus-visible:text-yellow-400 dark:focus-visible:bg-gray-800",
               open
-                ? "text-indigo-500 hover:text-indigo-500"
-                : "text-gray-800 dark:text-gray-300 hover:text-indigo-500",
+                ? "text-yellow-400 hover:text-yellow-400"
+                : "text-white hover:text-yellow-400",
               mobile
                 ? "w-full px-4 py-2 -ml-4"
                 : "inline-block px-4 py-2"
@@ -193,10 +190,10 @@ const DropdownMenu = ({ menu, items, mobile }) => {
                       <Link href={item?.path ? item.path : "#"} className={cx(
                         "flex space-x-2 lg:space-x-4 items-center px-5 py-2",
                         active
-                          ? "text-indigo-500"
-                          : "text-gray-800 dark:text-gray-300 hover:text-indigo-500 focus:text-indigo-500"
+                          ? "text-yellow-400"
+                          : "text-gray-700 dark:text-gray-300 hover:text-yellow-400 focus:text-yellow-400"
                       )}>
-                        
+                       
                           <span> {item.title}</span>
                       
                       </Link>
