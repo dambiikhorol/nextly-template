@@ -2,8 +2,6 @@ import { useRouter } from 'next/router';
 import Head from "next/head";
 import Navbar from "../../../components/navbar";
 import Footer from "../../../components/footer";
-import Cta from "../../../components/cta";
-import PopupWidget from "../../../components/popupWidget";
 import Banner from "../../../components/banner";
 import Container from "../../../components/container";
 
@@ -26,7 +24,7 @@ export default function BlogDetial() {
       <Banner />
       <Container >
         <div className="group relative">
-          <h3 className="mt-3 text-8xl font-semibold text-gray-900">
+          <h3 className="mt-3 text-xl md:text-8xl font-semibold text-gray-900">
             <span className="absolute inset-0 " />Boost your conversion rate
 
             <div className="relative mt-8 flex items-center gap-x-4">
@@ -61,9 +59,7 @@ export default function BlogDetial() {
           <p className="mt-5 line-clamp-3 text-sm leading-6 text-gray-600">Illo sint voluptas. Error voluptates culpa eligendi. Hic vel totam vitae illo. Non aliquid explicabo necessitatibus unde. Sed exercitationem placeat consectetur nulla deserunt vel. Iusto corrupti dicta.</p>
         </div>
       </Container>
-      <Cta />
       <Footer />
-      <PopupWidget />
     </>
 
   )
